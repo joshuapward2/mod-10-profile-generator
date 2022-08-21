@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/joshuapward2/mod-10-profile-generator/issues"
   },
-  "homepage": "https://github.com/joshuapward2/mod-10-profile-generator#readme"
+  "homepage": "https://github.com/joshuapward2/mod-10-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
