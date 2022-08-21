@@ -1,0 +1,19 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "oop tdd profile generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/joshuapward2/mod-10-profile-generator.git"
+  },
+  "author": "joshua ward",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuapward2/mod-10-profile-generator/issues"
+  },
+  "homepage": "https://github.com/joshuapward2/mod-10-profile-generator#readme"
+}
