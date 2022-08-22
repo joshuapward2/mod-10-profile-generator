@@ -83,10 +83,41 @@ function runPrompts() {
         ]).then(answers => {
             const managerAnswers = ( answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber );
             employeeArray.push(managerAnswers);
-            runPrompts(); 
+            addEmployee(); 
 
         });
+
+    }
+
+    function addEmployee () {
+
+        inquirer.prompt([
+                {
+                      type: 'list',
+                       name: "whoNext",
+                       message: "Would you like to add an employee or intern?",
+                       choices: ['Intern', 'Engineer']
+                   }
+               ]).then(ans => {
+                   if(ans.whoNext === 'Intern'){
+                       internQuestions()
+                   }
+
+                   else {
+                       engineerQuestions()
+                   } 
+                       
+                   
+               })
+
         
+    }
+
+    function internQuestions(){
+
+        inquirer.prompt([
+            
+        ])
     }
 }
 
