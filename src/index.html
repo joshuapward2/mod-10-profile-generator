@@ -1,3 +1,66 @@
+
+const htmlGenerator = team => {
+
+
+
+
+// engineer html
+
+const engineerGenerator = engineer => {
+
+    return `
+
+    <div class="col-4 mt-4 card">
+        <div class="card-header bg-primary text-green">
+            <h2 class="card-name">Name:${engineer.getName()}</h2>
+            <h3>Manager</h3>
+        </div>
+
+        <div class="card-body">
+            <ul class="empItems">
+            <li class="empId">${engineer.getId()}</li>
+            <li class="empEmail">Email: <a href="mailto:">${engineer.getEmail()}</a> </li>
+            <li class="empNum">Github: ${engineer.getGithub()}</li>
+            </ul>
+
+        </div>
+    </div>
+    `;
+};
+
+
+/ engineer html
+
+const internGenerator = intern => {
+
+    return `
+
+    <div class="col-4 mt-4 card">
+        <div class="card-header bg-primary text-green">
+            <h2 class="card-name">Name:${intern.getName()}</h2>
+            <h3>Manager</h3>
+        </div>
+
+        <div class="card-body">
+            <ul class="empItems">
+            <li class="empId">ID:${intern.getId()}</li>
+            <li class="empEmail">Email: <a href="mailto:">${intern.getEmail()}</a> </li>
+            <li class="empNum">School: ${intern.getSchool()}</li>
+            </ul>
+
+        </div>
+    </div>
+    `;
+};
+
+}
+
+
+
+
+
+
+`
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,27 +75,29 @@
     <header class="headerBox">
         <h1 class="headerText">My team</h1>
     </header>
-    <main class="container">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-4 mt-4 card">
                 <div class="card-header bg-primary text-green">
-                    <h2 class="card-name">${manager.getName()}</h2>
+                    <h2 class="card-name">Name:${manager.getName()}</h2>
                     <h3>Manager</h3>
                 </div>
 
                 <div class="card-body">
                     <ul class="empItems">
-                    <li class="empId">${manager.getId()}</li>
+                    <li class="empId">ID:${manager.getId()}</li>
                     <li class="empEmail">Email: <a href="mailto:">${manager.getEmail()}</a> </li>
                     <li class="empNum">Office: ${manager.getOfficeNumber()}</li>
                     </ul>
 
                 </div>
+                ${generateCards}
             </div>
-                ;
+                
         </div>
-
-    </main>
-    
+    </div>
 </body>
 </html>
+    `;
+
+
