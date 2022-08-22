@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="container">
-    <header class="row-2 headerBox">
+<body>
+    <header class="headerBox">
         <h1 class="headerText">My team</h1>
     </header>
     <main class="container">
@@ -19,21 +19,17 @@
                     <h2 class="card-name">${manager.getName()}</h2>
                     <h3>Manager</h3>
                 </div>
+
                 <div class="card-body">
                     <ul class="empItems">
                     <li class="empId">${manager.getId()}</li>
                     <li class="empEmail">Email: <a href="mailto:">${manager.getEmail()}</a> </li>
-
+                    <li class="empNum">Office: ${manager.getOfficeNumber()}</li>
                     </ul>
 
-                
-
-
-
-
-                
                 </div>
             </div>
+                ;
         </div>
 
     </main>

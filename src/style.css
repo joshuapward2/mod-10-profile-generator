@@ -1,0 +1,13 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerBox {
+    background-color:#0000Cd;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+    color: white;
+}
+
