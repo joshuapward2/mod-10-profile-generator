@@ -187,7 +187,7 @@ function runPrompts() {
         })       
    
 }
-function internQuestions () {
+function engineerQuestions () {
 
     inquirer.prompt([
 
@@ -260,7 +260,20 @@ function internQuestions () {
 }
 }
 
-
+const writeToFile = data => {
+         
+    
+    fs.writeFileSync('./dist/index.html', data, err => {
+        if(err) {
+            console.log(err);
+        }
+        else{
+            console.log("Your employee roster has been created. Please see index.html for details")
+        }
+    })
+};
+runPrompts()
+.then()
 
 
 
