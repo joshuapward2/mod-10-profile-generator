@@ -261,7 +261,6 @@ function engineerQuestions () {
     })
 
 }
-}
 
 const writeToFile = () => {
 
@@ -278,6 +277,12 @@ const writeToFile = () => {
 };
 
 writeToFile()
+
+}
+
+runPrompts();
+
+
 
 
 
