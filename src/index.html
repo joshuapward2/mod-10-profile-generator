@@ -13,7 +13,7 @@ const engineerGenerator = engineer => {
     <div class="col-4 mt-4 card">
         <div class="card-header bg-primary text-green">
             <h2 class="card-name">Name:${engineer.getName()}</h2>
-            <h3>Manager</h3>
+            <h3>Engineer</h3>
         </div>
 
         <div class="card-body">
@@ -38,7 +38,7 @@ const internGenerator = intern => {
     <div class="col-4 mt-4 card">
         <div class="card-header bg-primary text-green">
             <h2 class="card-name">Name:${intern.getName()}</h2>
-            <h3>Manager</h3>
+            <h3>Intern</h3>
         </div>
 
         <div class="card-body">
@@ -59,8 +59,41 @@ const internGenerator = intern => {
 
 
 
+//manager html
 
-`
+const managerGenerator = manager => {
+
+
+<div class="col-4 mt-4 card">
+    <div class="card-header bg-primary text-green">
+        <h2 class="card-name">Name:${manager.getName()}</h2>
+        <h3>Manager</h3>
+    </div>
+
+    <div class="card-body">
+        <ul class="empItems">
+        <li class="empId">ID:${manager.getId()}</li>
+        <li class="empEmail">Email: <a href="mailto:">${manager.getEmail()}</a> </li>
+        <li class="empNum">Office: ${manager.getOfficeNumber()}</li>
+        </ul>
+    </div>
+  
+</div>
+    `;
+};
+
+}
+
+
+
+
+
+
+
+
+
+
+return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,23 +110,8 @@ const internGenerator = intern => {
     </header>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-4 mt-4 card">
-                <div class="card-header bg-primary text-green">
-                    <h2 class="card-name">Name:${manager.getName()}</h2>
-                    <h3>Manager</h3>
-                </div>
-
-                <div class="card-body">
-                    <ul class="empItems">
-                    <li class="empId">ID:${manager.getId()}</li>
-                    <li class="empEmail">Email: <a href="mailto:">${manager.getEmail()}</a> </li>
-                    <li class="empNum">Office: ${manager.getOfficeNumber()}</li>
-                    </ul>
-
-                </div>
-                ${generateCards}
-            </div>
-                
+            
+            ${generateCards}
         </div>
     </div>
 </body>

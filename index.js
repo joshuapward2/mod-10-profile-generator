@@ -18,7 +18,6 @@ const employeeArray = [];
 function runPrompts() {
     
     
-    createManager();
 
     function createManager() {
 
