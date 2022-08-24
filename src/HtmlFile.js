@@ -3,7 +3,7 @@
 const htmlGenerator = team => {
 
 
-    const cardGeneratorArr = [];
+    const generateCards = [];
 
 
     for(let i = 0; i < team.length; i++ );

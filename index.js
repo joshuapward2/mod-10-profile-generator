@@ -263,10 +263,11 @@ function engineerQuestions () {
 }
 }
 
-const writeToFile = data => {
-         
+const writeToFile = () => {
+
+    const html = htmlGenerator(team)     
     
-    fs.writeFileSync('./dist/index.html', data, err => {
+    fs.writeFileSync('./dist/index.html', html, err => {
         if(err) {
             console.log(err);
         }
@@ -275,8 +276,8 @@ const writeToFile = data => {
         }
     })
 };
-runPrompts()
-.then()
+
+writeToFile()
 
 
 
