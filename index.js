@@ -1,4 +1,4 @@
-const HtmlFile = require('./src/HtmlFile');
+const htmlFile = require('./src/pageGenerator');
 
 
 const fs = require('fs');

@@ -40,7 +40,7 @@ const htmlGenerator = team => {
             </div>
         </div>
         `;
-        cardGeneratorArr.push(data);
+        cardGeneratorArr.push(team);
     };
 
 
@@ -69,7 +69,7 @@ const htmlGenerator = team => {
         </div>
 
         `;
-        cardGeneratorArr.push(data);
+        cardGeneratorArr.push(team);
     };
   
     
@@ -99,9 +99,10 @@ const htmlGenerator = team => {
       
     </div>
         `;
-        cardGeneratorArr.push(data);
+        cardGeneratorArr.push(team);
     };
-   
+
+
 
     return `
     <!DOCTYPE html>
@@ -130,12 +131,14 @@ const htmlGenerator = team => {
         `;
     
     
-}
-
+    
+    
+    
+};
+module.exports = pageGenerator;
     
     
     
     
-        module.exports = HtmlFile;
-    
+ 
     
