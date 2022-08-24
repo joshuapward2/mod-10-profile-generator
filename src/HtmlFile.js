@@ -1,3 +1,5 @@
+
+
 const htmlGenerator = team => {
 
 
@@ -20,7 +22,7 @@ const htmlGenerator = team => {
     
     const engineerGenerator = engineer => {
     
-        return `
+         `
     
         <div class="col-4 mt-4 card">
             <div class="card-header bg-primary text-green">
@@ -38,14 +40,17 @@ const htmlGenerator = team => {
             </div>
         </div>
         `;
+        cardGeneratorArr.push(data);
     };
+
+
     
     
     // engineer html
     
     const internGenerator = intern => {
     
-        return `
+         `
     
         <div class="col-4 mt-4 card">
             <div class="card-header bg-primary text-green">
@@ -62,10 +67,12 @@ const htmlGenerator = team => {
     
             </div>
         </div>
+
         `;
+        cardGeneratorArr.push(data);
     };
+  
     
-    }
     
     
     
@@ -92,19 +99,10 @@ const htmlGenerator = team => {
       
     </div>
         `;
+        cardGeneratorArr.push(data);
     };
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
+
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -131,5 +129,13 @@ const htmlGenerator = team => {
 
         `;
     
+    
+}
+
+    
+    
+    
+    
+        module.exports = HtmlFile;
     
     

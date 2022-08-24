@@ -1,10 +1,11 @@
-const HtmlFile = require('.src/HtmlFile');
+const HtmlFile = require('./src/HtmlFile');
 
 
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { type } = require('os');
-const { finished } = require('stream');
+
+// const { type } = require('os');
+// const { finished } = require('stream');
 
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
