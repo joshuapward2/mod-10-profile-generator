@@ -18,7 +18,7 @@ const employeeArray = [];
 
 function runPrompts() {
     
-    
+    createManager()
 
     function createManager() {
 
@@ -85,7 +85,7 @@ function runPrompts() {
             }
 
         ]).then(answers => {
-            const managerAnswers = ( answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber );
+            const managerAnswers = new Manager ( answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber );
             employeeArray.push(managerAnswers);
             addEmployee(); 
 
@@ -111,7 +111,7 @@ function runPrompts() {
                    }
 
                    else {
-                        finished()
+                        writeToFile()
                    } 
                        
                    
@@ -264,9 +264,9 @@ function engineerQuestions () {
 
 const writeToFile = () => {
 
-    const html = htmlGenerator(team)     
+    const html = htmlFile(employeeArray)     
     
-    fs.writeFileSync('./dist/index.html', html, err => {
+    fs.writeFile('./dist/index.html', html, err => {
         if(err) {
             console.log(err);
         }
@@ -276,7 +276,7 @@ const writeToFile = () => {
     })
 };
 
-writeToFile()
+
 
 }
 

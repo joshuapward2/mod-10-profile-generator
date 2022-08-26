@@ -2,27 +2,33 @@
 
 const htmlGenerator = team => {
 
+    function generateCards () {
+        for(let i = 0; i < team.length; i++ ){ console.log(team[i])
+            if (team[i].getRole() === 'Manager') {
+                managerGenerator(team[i]); console.log(team[i])
+            }
+            else if(team[i].getRole() === 'Engineer') {
+                engineerGenerator(team[i]);console.log(team[i])
+            
+            }
+            else if(team[i].getRole() === 'Intern') {
+                internGenerator(team[i]);
+            
+            }
+        }
 
-    const generateCards = [];
+    }
 
 
-    for(let i = 0; i < team.length; i++ );
-    if (team[i].getName() === manager) {
-        managerGenerator(team[i]);
-    }
-    else if(team[i].getName() === engineer) {
-        engineerGenerator(team[i]);
-    }
-    else if(team[i].getName() === intern) {
-        internGenerator(team[i]);
-    }
-    
+const teamArray = [];
+
+
 
     // engineer html
     
     const engineerGenerator = engineer => {
-    
-         `
+
+        const eng1 = `
     
         <div class="col-4 mt-4 card">
             <div class="card-header bg-primary text-green">
@@ -32,7 +38,7 @@ const htmlGenerator = team => {
     
             <div class="card-body">
                 <ul class="empItems">
-                <li class="empId">${engineer.getId()}</li>
+                <li class="empId">ID: ${engineer.getId()}</li>
                 <li class="empEmail">Email: <a href="mailto:">${engineer.getEmail()}</a> </li>
                 <li class="empNum">Github: ${engineer.getGithub()}</li>
                 </ul>
@@ -40,8 +46,9 @@ const htmlGenerator = team => {
             </div>
         </div>
         `;
-        cardGeneratorArr.push(team);
+     teamArray.push(eng1);
     };
+    
 
 
     
@@ -50,7 +57,7 @@ const htmlGenerator = team => {
     
     const internGenerator = intern => {
     
-         `
+         const intern1 = `
     
         <div class="col-4 mt-4 card">
             <div class="card-header bg-primary text-green">
@@ -69,7 +76,7 @@ const htmlGenerator = team => {
         </div>
 
         `;
-        cardGeneratorArr.push(team);
+    teamArray.push(intern1);
     };
   
     
@@ -82,7 +89,7 @@ const htmlGenerator = team => {
     
     const managerGenerator = manager => {
     
-    `
+    const manager1 = `
     <div class="col-4 mt-4 card">
         <div class="card-header bg-primary text-green">
             <h2 class="card-name">Name:${manager.getName()}</h2>
@@ -99,10 +106,10 @@ const htmlGenerator = team => {
       
     </div>
         `;
-        cardGeneratorArr.push(team);
+teamArray.push(manager1);
     };
 
-
+generateCards();
 
     return `
     <!DOCTYPE html>
@@ -122,7 +129,7 @@ const htmlGenerator = team => {
         <div class="container">
             <div class="row justify-content-center">
                 
-                ${generateCards}
+                ${teamArray.join(" ")}
             </div>
         </div>
     </body>
@@ -130,12 +137,16 @@ const htmlGenerator = team => {
 
         `;
     
-    
-    
-    
+
+
+
     
 };
-module.exports = pageGenerator;
+
+
+
+
+module.exports = htmlGenerator;
     
     
     
